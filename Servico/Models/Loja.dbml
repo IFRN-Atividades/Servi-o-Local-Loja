@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Loja" Class="LojaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=GABRIELDINI5F24\GILSON;Initial Catalog=Loja;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LojaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Fabricante" Member="Fabricantes">
+    <Type Name="Fabricante">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Fabricante_Veiculo" Member="Veiculos" AccessModifier="Internal" ThisKey="Id" OtherKey="IdFabricante" Type="Veiculo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Veiculo" Member="Veiculos">
+    <Type Name="Veiculo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Modelo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IdFabricante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vendido" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Fabricante_Veiculo" Member="Fabricante" AccessModifier="Internal" ThisKey="IdFabricante" OtherKey="Id" Type="Fabricante" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

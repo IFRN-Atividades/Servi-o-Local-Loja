@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Loja">
+  <DataContextMoniker Name="/LojaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f05dfc1c-1a61-4f8e-8a13-f1b79a0c7bf0" absoluteBounds="2.625, 1.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LojaDataContext/Fabricante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aae33ec0-8a48-4d31-9640-17d0f39297c2" absoluteBounds="2.64, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="501daba5-ef39-4d8e-b6e9-31d633d2a81e" absoluteBounds="3.5, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LojaDataContext/Veiculo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f7f84ce-0056-4980-bc3b-735c94a1b0a5" absoluteBounds="3.515, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.0625 : 2.56899251302083); (4.0625 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LojaDataContext/Fabricante/Fabricante_Veiculo" />
+      <nodes>
+        <classShapeMoniker Id="f05dfc1c-1a61-4f8e-8a13-f1b79a0c7bf0" />
+        <classShapeMoniker Id="501daba5-ef39-4d8e-b6e9-31d633d2a81e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
